@@ -9,6 +9,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+container: maven:3.6.1-jdk-11
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
@@ -16,10 +18,12 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
+    ls -R /_w/
   displayName: 'Run a multi-line script'
+
 - task: ApplicationSecurity@1
   inputs:
     AppSecTestService: 'prod account'
     applications: '2433ac8c-4059-e811-9423-002590ac753d'
-    scanname: 'simpleIOTscanTest'
+    scanname: 'simpleIOTscanTestmaven'
     scantype: 'static'
