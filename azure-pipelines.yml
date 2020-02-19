@@ -9,7 +9,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-container: maven:3.6.1-jdk-11
+# container: maven:3.6.1-jdk-11
+container: 'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!
