@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Application name="SimpleIOT-1" version="8.8.0.0">
+	<Projects>
+		<Project ltd_name="java" path=".\SimpleIOT_Java.ppf"/>
+	</Projects>
+	<StringPool>
+		<String id="1"/>
+		<String id="2" value="TestCase_IOT_Branching.main(java.lang.String[]):void"/>
+		<String id="3" value="TestCase_IOT_MediumCallStack.readIntoBuf(java.io.FileInputStream;byte[]):void"/>
+		<String id="4" value="Vulnerability.Cryptography.PoorEntropy"/>
+		<String id="5" value="Vulnerability.Info"/>
+		<String id="6" value="fis . java.io.FileInputStream.read ( buf )"/>
+		<String id="7" value="java.io.FileInputStream"/>
+		<String id="8" value="java.io.FileInputStream.read"/>
+		<String id="9" value="java.io.FileInputStream.read(byte[]):int"/>
+		<String id="10" value="java.util.Random"/>
+		<String id="11" value="java.util.Random.nextInt"/>
+		<String id="12" value="java.util.Random.nextInt(int):int"/>
+		<String id="13" value="new java.util.Random . java.util.Random.nextInt ( 5 )"/>
+	</StringPool>
+	<FilePool>
+		<File id="1" value="..\..\simpleIOT\TestCase_IOT_Branching.java"/>
+		<File id="2" value="..\..\simpleIOT\TestCase_IOT_MediumCallStack.java"/>
+	</FilePool>
+	<SitePool>
+		<Site caller="3" cn="7" cxt="6" file_id="2" id="1" language_type="2" ln="41" method="8" ord="1" sig="9"/>
+		<Site caller="2" cn="10" cxt="13" file_id="1" id="2" language_type="2" ln="24" method="11" ord="1" sig="12"/>
+	</SitePool>
+	<FindingDataPool>
+		<FindingData ao_id="231159" conf="3" id="1" project_name="1" rec_id="511785" sev="3" site_id="1" vtype="5"/>
+		<FindingData ao_id="80216" conf="2" id="2" project_name="1" rec_id="514792" sev="0" site_id="2" vtype="4"/>
+	</FindingDataPool>
+	<FindingModifications exclusion="false" version="8.0.0">
+		<Finding data_id="1"/>
+		<Finding data_id="2"/>
+	</FindingModifications>
+	<Findings exclusion="false" version="8.0.0">
+	</Findings>
+</Application>
